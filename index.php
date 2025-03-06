@@ -1,5 +1,6 @@
 <?php
   include('database\database.php');
+  include('database\delete.php');
   include('partials\header.php');
   include('partials\sidebar.php');
 
@@ -33,7 +34,7 @@
                   <h5 class="card-title">Default Table</h5>
                 </div>
                 <div>
-                  <button class="btn btn-primary btn-sm mt-4 mx-3">Add Employee</button>
+                  <button class="btn btn-primary btn-sm mt-4 mx-3">Add book</button>
                 </div>
               </div>
 
@@ -70,10 +71,16 @@
                     aria-hidden="true">
                     </div>
 
-                    <button class="btn btn-danger btnb-sm mx-1" data-bs-toggle="modal" data-bs-target="#delete">Delete</button>
+                    <form action="database/delete.php" method="POST" onsubmit="return confirm('Are you sure you want to delete this book?');">
+                    <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
 
+                    <button class="btn btn-danger btn-sm mx-1" data-bs-toggle="model" data-bs-target="#editInfo">Delete</button>
+                    
                     <div class="modal fade" id="delete" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editInfoLabel"
                     aria-hidden="true">
+
+                    <form action="database/delete.php" method="POST" onsubmit="return confirm('Are you sure you want to delete this book?');">
+                    <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
                     </div>
                   </td>
                 </tr>
