@@ -1,5 +1,4 @@
 <?php
-session_start();
 include('database.php'); 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -25,6 +24,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     mysqli_close($conn);
     header("Location: ../index.php"); 
-    exit();
 }
 ?>
