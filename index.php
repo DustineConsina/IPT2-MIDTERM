@@ -93,11 +93,26 @@
                           </div>
                         </div>
 
-                        <!-- Delete Form -->
-                        <form action="database/delete.php" method="POST" onsubmit="return confirm('Are you sure you want to delete this book?');">
-                          <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
-                          <button class="btn btn-danger btn-sm mx-1">Delete</button>
-                        </form>
+                        <button class="btn btn-danger btn-sm mx-1" data-bs-toggle="modal" data-bs-target="#delete">Delete</button>
+                        <!-- Delete Modal -->
+                        <div class="modal fade" id="delete" data-bs-backdrop="static" data-bs-backdrop="false" tabindex="-1" aria-labelledby="editInfolabel" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                              <div class="modal-body text-center">
+                                <h1 class="text-danger" style="font-size: 50px"><strong>!</strong></h1>
+                                <h5>Are you sure you want to delete this employee?</h5>
+                                <h6>This action cannot be undone.</h6>
+                              </div>
+                              <div class="modal-footer d-flex justify-content-center">
+                                 <form action="database/delete.php" method="POST">
+                                  <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
+                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                  <button type="submit" class="btn btn-danger" data-bs-dismiss="modal">Yes, Delete</button>
+                               </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </td>
                     </tr>
                   <?php endwhile; ?>
