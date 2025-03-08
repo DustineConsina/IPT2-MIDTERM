@@ -1,7 +1,5 @@
 <?php
   include('database/database.php');
-  include('database/delete.php');
-  include('database/update.php');
   include('partials/header.php');
   include('partials/sidebar.php');
 
@@ -30,7 +28,7 @@
           <div class="card-body">
             <div class="d-flex justify-content-between">
               <h5 class="card-title">Book List</h5>
-              <button class="btn btn-primary btn-sm mt-4 mx-3">Add book</button>
+              <button class="btn btn-primary btn-sm mt-4 mx-3" data-bs-toggle="modal" data-bs-target="#addBookModal">Add Book</button>
             </div>
 
             <!-- Default Table -->
@@ -38,10 +36,10 @@
               <thead>
                 <tr>
                   <th>#</th>
-                  <th>title</th>
+                  <th>Title</th>
                   <th>Author</th>
                   <th>Genre</th>
-                  <th>Date_Published</th>
+                  <th>Date Published</th>
                   <th class="text-center">Action</th>
                 </tr>
               </thead>
@@ -57,18 +55,20 @@
                       <td class="d-flex justify-content-center">
                         <!-- Edit Button -->
                         <button class="btn btn-success btn-sm mx-1" data-bs-toggle="modal" data-bs-target="#editModal<?php echo $row['id']; ?>">Edit</button>
+
+                        <!-- Edit Modal -->
                         <div class="modal fade" id="editModal<?php echo $row['id']; ?>" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
                           <div class="modal-dialog">
                             <div class="modal-content">
                               <div class="modal-header">
-                                <h5 class="modal-title" id="editModalLabel">Edit Book</h5>
+                                <h5 class="modal-title">Edit Book</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                               </div>
                               <form action="database/update.php" method="POST">
                                 <div class="modal-body">
                                   <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
                                   <div class="mb-3">
-                                    <label class="form-label">title</label>
+                                    <label class="form-label">Title</label>
                                     <input type="text" name="title" class="form-control" value="<?php echo $row['title']; ?>" required>
                                   </div>
                                   <div class="mb-3">
@@ -80,7 +80,7 @@
                                     <input type="text" name="Genre" class="form-control" value="<?php echo $row['Genre']; ?>" required>
                                   </div>
                                   <div class="mb-3">
-                                    <label class="form-label">Date_Published</label>
+                                    <label class="form-label">Date Published</label>
                                     <input type="date" name="Date_Published" class="form-control" value="<?php echo $row['Date_Published']; ?>" required>
                                   </div>
                                 </div>
@@ -93,22 +93,24 @@
                           </div>
                         </div>
 
-                        <button class="btn btn-danger btn-sm mx-1" data-bs-toggle="modal" data-bs-target="#delete">Delete</button>
+                        <!-- Delete Button -->
+                        <button class="btn btn-danger btn-sm mx-1" data-bs-toggle="modal" data-bs-target="#deleteModal<?php echo $row['id']; ?>">Delete</button>
+
                         <!-- Delete Modal -->
-                        <div class="modal fade" id="delete" data-bs-backdrop="static" data-bs-backdrop="false" tabindex="-1" aria-labelledby="editInfolabel" aria-hidden="true">
+                        <div class="modal fade" id="deleteModal<?php echo $row['id']; ?>" data-bs-backdrop="static" tabindex="-1" aria-labelledby="deleteLabel" aria-hidden="true">
                           <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
                               <div class="modal-body text-center">
                                 <h1 class="text-danger" style="font-size: 50px"><strong>!</strong></h1>
-                                <h5>Are you sure you want to delete this employee?</h5>
+                                <h5>Are you sure you want to delete this book?</h5>
                                 <h6>This action cannot be undone.</h6>
                               </div>
                               <div class="modal-footer d-flex justify-content-center">
-                                 <form action="database/delete.php" method="POST">
+                                <form action="database/delete.php" method="POST">
                                   <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
                                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                  <button type="submit" class="btn btn-danger" data-bs-dismiss="modal">Yes, Delete</button>
-                               </form>
+                                  <button type="submit" class="btn btn-danger">Yes, Delete</button>
+                                </form>
                               </div>
                             </div>
                           </div>
@@ -131,5 +133,41 @@
   </section>
 
 </main><!-- End #main -->
+
+<!-- Create (Add Book) Modal -->
+<div class="modal fade" id="addBookModal" tabindex="-1" aria-labelledby="addBookLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <form action="database/create.php" method="POST">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Add Book</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label class="form-label">Title</label>
+            <input type="text" name="title" id="title" class="form-control" placeholder="Enter title" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Author</label>
+            <input type="text" name="Author" id="Author" class="form-control" placeholder="Enter author"required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Genre</label>
+            <input type="text" name="Genre" id="Genre" class="form-control" placeholder="Enter genre"required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Date Published</label>
+            <input type="date" name="Date_Published" id="Date_Published" class="form-control" placeholder="Enter Date Published"required>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Add Book</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
 
 <?php include('partials/footer.php'); ?>

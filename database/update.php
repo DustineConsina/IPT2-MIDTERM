@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('database.php'); 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -19,10 +20,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (mysqli_query($conn, $sql)) {
         $_SESSION['status'] = "updated";
     } else {
-        $_SESSION['status'] = "error: " . mysqli_error($conn); 
+        $_SESSION['status'] = "error: "; 
     }
 
     mysqli_close($conn);
     header("Location: ../index.php"); 
+    exit();
 }
 ?>
