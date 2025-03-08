@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $sql = "DELETE FROM books WHERE id='$id'";
     
     if (mysqli_query($conn, $sql)) {
-        $_SESSION['status'] = "BOOK DELETED";
+        $_SESSION['status'] = "DELETED";
     } else {
         $_SESSION['status'] = "error";
     }
