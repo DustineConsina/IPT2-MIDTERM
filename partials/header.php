@@ -76,8 +76,8 @@
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>Juan Dela Cruz</h6>
-              <span>Web Designer</span>
+              <h6>Group 9</h6>
+              <span>Midterm</span>
             </li>
             <li>
               <hr class="dropdown-divider">

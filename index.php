@@ -93,6 +93,44 @@
                           </div>
                         </div>
 
+
+                            <!-- View Button -->
+                            <button class="btn btn-primary btn-sm mx-1" data-bs-toggle="modal" data-bs-target="#ViewModal<?php echo $row['id']; ?>">View</button>
+
+                            <!-- View Modal -->
+                            <div class="modal fade" id="ViewModal<?php echo $row['id']; ?>" tabindex="-1" aria-labelledby="ViewModalLabel" aria-hidden="true">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title">View Book Details</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <div class="modal-body">
+                                  <div class="mb-3">
+                                    <label class="form-label">Title</label>
+                                    <input type="text" class="form-control" value="<?php echo $row['title']; ?>" disabled>
+                                  </div>
+                                  <div class="mb-3">
+                                    <label class="form-label">Author</label>
+                                    <input type="text" class="form-control" value="<?php echo $row['Author']; ?>" disabled>
+                                  </div>
+                                  <div class="mb-3">
+                                    <label class="form-label">Genre</label>
+                                    <input type="text" class="form-control" value="<?php echo $row['Genre']; ?>" disabled>
+                                  </div>
+                                  <div class="mb-3">
+                                    <label class="form-label">Date Published</label>
+                                    <input type="date" class="form-control" value="<?php echo $row['Date_Published']; ?>" disabled>
+                                  </div>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+
                         <!-- Delete Button -->
                         <button class="btn btn-danger btn-sm mx-1" data-bs-toggle="modal" data-bs-target="#deleteModal<?php echo $row['id']; ?>">Delete</button>
 
@@ -134,40 +172,41 @@
 
 </main><!-- End #main -->
 
-<!-- Create (Add Book) Modal -->
-<div class="modal fade" id="addBookModal" tabindex="-1" aria-labelledby="addBookLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <form action="database/create.php" method="POST">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Add Book</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="mb-3">
-            <label class="form-label">Title</label>
-            <input type="text" name="title" id="title" class="form-control" placeholder="Enter title" required>
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Author</label>
-            <input type="text" name="Author" id="Author" class="form-control" placeholder="Enter author"required>
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Genre</label>
-            <input type="text" name="Genre" id="Genre" class="form-control" placeholder="Enter genre"required>
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Date Published</label>
-            <input type="date" name="Date_Published" id="Date_Published" class="form-control" placeholder="Enter Date Published"required>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-primary">Add Book</button>
-        </div>
-      </div>
-    </form>
-  </div>
-</div>
+                        <!-- Create (Add Book) Modal -->
+                        <div class="modal fade" id="addBookModal" tabindex="-1" aria-labelledby="addBookLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <form action="database/create.php" method="POST">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title">Add Book</h5>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                              <div class="mb-3">
+                                  <label class="form-label">Title</label>
+                                  <input type="text" name="title" id="title" class="form-control" placeholder="Enter title" required>
+                              </div>
+                              <div class="mb-3">
+                                <label class="form-label">Author</label>
+                                <input type="text" name="Author" id="Author" class="form-control" placeholder="Enter author"required>
+                              </div>
+                              <div class="mb-3">
+                                <label class="form-label">Genre</label>
+                                <input type="text" name="Genre" id="Genre" class="form-control" placeholder="Enter genre"required>
+                              </div>
+                              <div class="mb-3">
+                                <label class="form-label">Date Published</label>
+                                <input type="date" name="Date_Published" id="Date_Published" class="form-control" placeholder="Enter Date Published"required>
+                              </div>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                              <button type="submit" class="btn btn-primary">Add Book</button>
+                            </div>
+                          </div>
+                      </form>
+                    </div>
+                  </div>
+
 
 <?php include('partials/footer.php'); ?>
