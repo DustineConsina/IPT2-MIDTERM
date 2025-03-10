@@ -45,7 +45,7 @@
 
     <div class="d-flex align-items-center justify-content-between">
       <a href="index.php" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.png" alt="">
+        <img src="assets/img/sorsu.png" alt="">
         <span class="d-none d-lg-block">GROUP 9-IPT2</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
@@ -70,8 +70,10 @@
         <li class="nav-item dropdown pe-3">
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">J. Dela Cruz</span>
+            <img src="assets/img/sanoy.jpg" alt="Profile" class="rounded-circle">
+            <img src="assets/img/germina.jpg" alt="Profile" class="rounded-circle">
+            <img src="assets/img/gordola (1).jpg" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">Group 9</span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">

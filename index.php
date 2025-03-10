@@ -21,7 +21,7 @@
 <main id="main" class="main">
 
   <div class="pagetitle">
-    <h1>Book Information Management System</h1>
+    <h1>SorSu Book Management System</h1>
     <nav>
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="index.php">Home</a></li>
@@ -135,7 +135,7 @@
                                   </div>
                                   </div>
                                   <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
                                 </div>
                               </div>
                             </div>
