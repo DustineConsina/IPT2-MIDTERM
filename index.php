@@ -4,7 +4,18 @@
   include('partials/sidebar.php');
 
   $sql = "SELECT * FROM books";
-  $books = $conn->query($sql);
+
+  if (!empty($_GET['search'])) {
+      $search = $_GET['search'];
+      $sql = "SELECT * FROM books WHERE title LIKE '%$search%' OR Author LIKE '%$search%' OR Genre LIKE '%$search%' OR Date_Published LIKE '%$search%'";
+  }
+  
+  $books = $conn->query($sql);  
+  $status = '';
+  if (isset($_SESSION['status'])) {
+    $status = $_SESSION['status'];
+    unset($_SESSION['status']);
+  }
 ?>
 
 <main id="main" class="main">
@@ -35,7 +46,7 @@
             <table class="table">
               <thead>
                 <tr>
-                  <th>#</th>
+                  <th>ID</th>
                   <th>Title</th>
                   <th>Author</th>
                   <th>Genre</th>
