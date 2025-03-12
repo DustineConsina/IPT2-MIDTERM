@@ -13,4 +13,8 @@
     }
     echo "Connected";
 
+    $query = "SELECT * FROM books ORDER BY id ASC";
+
+    $counter = 1;
+
 ?>
