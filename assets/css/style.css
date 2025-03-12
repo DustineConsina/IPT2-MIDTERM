@@ -15,14 +15,14 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  background: #f6f9ff;
+  background: #e93030;
   background: #a0a3a8;
   background: #f7f8fa;
   color: #444444;
 }
 
 a {
-  color: #4154f1;
+  color: #cf2a2a;
   text-decoration: none;
 }
 
@@ -66,7 +66,7 @@ h6 {
   font-size: 24px;
   margin-bottom: 0;
   font-weight: 600;
-  color: #012970;
+  color: #cc1c1c;
 }
 
 /*--------------------------------------------------------------
@@ -79,7 +79,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 99999;
-  background: #4154f1;
+  background: #e63030;
   width: 40px;
   height: 40px;
   border-radius: 4px;
