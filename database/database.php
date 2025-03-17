@@ -13,6 +13,4 @@
     }
     echo "Connected";
 
-    $counter = 1;
-
 ?>
