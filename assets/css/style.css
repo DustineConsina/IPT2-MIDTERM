@@ -15,10 +15,10 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  background: #584f4f;
-  background: #584f4f;
-  background: #584f4f;
-  color: #584f4f;
+  background: #eba0a0;
+  background: #f09b9b;
+  background: #6b1e1e;
+  color: #e6dfdf;
 }
 
 a {
@@ -66,7 +66,7 @@ h6 {
   font-size: 24px;
   margin-bottom: 0;
   font-weight: 600;
-  color: #e0d6d6;
+  color: #edeef1;
 }
 
 /*--------------------------------------------------------------
@@ -230,7 +230,7 @@ h6 {
 .card-footer {
   border-color: #ebeef4;
   background-color: #fff;
-  color: #798eb3;
+  color: #e8eaee;
   padding: 15px;
 }
 
@@ -243,7 +243,7 @@ h6 {
 }
 
 .card-title span {
-  color: #899bbd;
+  color: #3c69bd;
   font-size: 14px;
   font-weight: 400;
 }
@@ -309,25 +309,25 @@ h6 {
 .breadcrumb {
   font-size: 14px;
   font-family: "Nunito", sans-serif;
-  color: #899bbd;
+  color: #f0f2f7;
   font-weight: 600;
 }
 
 .breadcrumb a {
-  color: #899bbd;
+  color: #e4e8f0;
   transition: 0.3s;
 }
 
 .breadcrumb a:hover {
-  color: #51678f;
+  color: #eceef1;
 }
 
 .breadcrumb .breadcrumb-item::before {
-  color: #899bbd;
+  color: #e8e9ec;
 }
 
 .breadcrumb .active {
-  color: #51678f;
+  color: #e1e5eb;
   font-weight: 600;
 }
 
@@ -383,7 +383,7 @@ h6 {
   z-index: 997;
   height: 60px;
   box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
-  background-color: #86b0e0;
+  background-color: #942020;
   padding-left: 20px;
   /* Toggle Sidebar Button */
   /* Search Bar */
@@ -393,7 +393,7 @@ h6 {
   font-size: 32px;
   padding-left: 10px;
   cursor: pointer;
-  color: #e0d0d0;
+  color: #d0d5e0;
 }
 
 .header .search-bar {
@@ -430,7 +430,7 @@ h6 {
 .header .search-form input {
   border: 0;
   font-size: 14px;
-  color: #e2d8d8;
+  color: #2719e4;
   border: 1px solid rgba(1, 41, 112, 0.2);
   padding: 7px 38px 7px 8px;
   border-radius: 3px;
@@ -470,13 +470,13 @@ h6 {
 
 .header-nav .nav-icon {
   font-size: 22px;
-  color: #012970;
+  color: #eff1f5;
   margin-right: 25px;
   position: relative;
 }
 
 .header-nav .nav-profile {
-  color: #012970;
+  color: #e5e6e7;
 }
 
 .header-nav .nav-profile img {
@@ -521,7 +521,7 @@ h6 {
 .header-nav .notifications .notification-item p {
   font-size: 13px;
   margin-bottom: 3px;
-  color: #919191;
+  color: #3619db;
 }
 
 .header-nav .notifications .notification-item:hover {
@@ -550,7 +550,7 @@ h6 {
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #444444;
+  color: #2335da;
 }
 
 .header-nav .messages .message-item p {
@@ -612,7 +612,7 @@ h6 {
   scrollbar-width: thin;
   scrollbar-color: #aab7cf transparent;
   box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
-  background-color: #dd5e5e;
+  background-color: #dbd4d4;
 }
 
 @media (max-width: 1199px) {
@@ -1219,17 +1219,17 @@ h6 {
   padding: 20px 0;
   font-size: 14px;
   transition: all 0.3s;
-  border-top: 1px solid #cddfff;
+  border-top: 1px solid #f3f5f7;
 }
 
 .footer .copyright {
   text-align: center;
-  color: #012970;
+  color: #f5f7fa;
 }
 
 .footer .credits {
   padding-top: 5px;
   text-align: center;
   font-size: 13px;
-  color: #012970;
+  color: #edeef0;
 }

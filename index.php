@@ -87,7 +87,7 @@
                 <?php if ($books->num_rows > 0): ?>
                   <?php while ($row = $books->fetch_assoc()): ?>
                     <tr>
-                      <th scope="row"><?php echo $row['id']; ?></th>
+                      <td><?php echo $counter++; ?></td>
                       <td><?php echo $row['title']; ?></td>
                       <td><?php echo $row['Author']; ?></td>
                       <td><?php echo $row['Genre']; ?></td>
